@@ -24,7 +24,8 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 	border: 4,
 	colorDark : "#000000",
 	colorLight : "#ffffff",
-	correctLevel : QRCode.CorrectLevel.H
+	correctLevel : QRCode.CorrectLevel.H,
+	altText: "Scan me!"
 });
 </script>
 ```

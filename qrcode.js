@@ -403,7 +403,7 @@ var QRCode;
             this._oContext = this._elCanvas.getContext("2d");
             this._bIsPainted = false;
             this._elImage = document.createElement("img");
-            this._elImage.alt = "Scan me!";
+            this._elImage.alt = htOption.altText;
             this._elImage.style.display = "none";
             this._el.appendChild(this._elImage);
             this._bSupportDataURI = null;
@@ -584,6 +584,7 @@ var QRCode;
      * @param {String} [vOption.colorDark="#000000"]
      * @param {String} [vOption.colorLight="#ffffff"]
      * @param {QRCode.CorrectLevel} [vOption.correctLevel=QRCode.CorrectLevel.H] [L|M|Q|H]
+     * @param {String} [vOption.altText="Scan Me!"] Alt text for the generated image
      */
     QRCode = function (el, vOption) {
         this._htOption = {
@@ -593,7 +594,8 @@ var QRCode;
             typeNumber : 4,
             colorDark : "#000000",
             colorLight : "#ffffff",
-            correctLevel : QRErrorCorrectLevel.H
+            correctLevel : QRErrorCorrectLevel.H,
+            altText: "Scan me!"
         };
 
         if (typeof vOption === 'string') {
